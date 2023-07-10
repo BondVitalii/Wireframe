@@ -5,101 +5,104 @@
     <meta name="description" content="Wireframe site" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wireframe</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <!-- секция Header (Шапка сайта)-->
+    <!-- Header секция (Шапка сайта)-->
     <header>
       <nav>
-        <a href="./index.html">
+        <a class="logo link" href="./index.html">
           <img
             src="./imag/header/svg/union-2.svg"
             alt="Логотип компании"
           />photo
         </a>
 
-        <ul>
+        <ul class="site-nav">
           <li>
-            <a href="">Features</a>
+            <a class="link current" href="">Features</a>
           </li>
           <li>
-            <a href="">Pricing</a>
+            <a class="link" href="">Pricing</a>
           </li>
           <li>
-            <a href="">Community</a>
+            <a class="link" href="">Community</a>
           </li>
           <li>
-            <a href="">Support</a>
+            <a class="link" href="">Support</a>
           </li>
         </ul>
 
-        <ul>
+        <ul class="auth-nav">
           <li>
-            <a href="">Log in</a>
+            <a class="button secondary link" href="">Log in</a>
           </li>
           <li>
-            <a href="">Register</a>
+            <a class="button primary link" href="">Register</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <!-- секция Hero (Герой) -->
-      <section>
-        <h1>The largest community of photo enthusiasts</h1>
-        <a href="">Join Today</a>
+      <!-- Hero секция (Герой) -->
+      <section class="hero">
+        <h1 class="hero-title">The largest community of photo enthusiasts</h1>
+        <a class="button primary link" href="">Join Today</a>
       </section>
 
-      <!-- секция About (Преимушества)-->
-      <section>
-        <h2>
+      <!-- Feature секция (Преимушества)-->
+      <section class="section">
+        <h2 class="section-title">
           Snap photos and share like <br />
           never before
         </h2>
-        <ul>
+        <ul class="feature-list">
           <li>
-            <h3>Sed ut perspiciatis</h3>
+            <h3 class="title">Sed ut perspiciatis</h3>
             <p>
               Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
               aut fugit, sed quia consequuntur magni dolores eos qui ratione
               voluptatem sequi nesciunt. Neque porro quisquam est.
             </p>
-            <a href="">Learn more</a>
+            <a class="button secondary link" href="">Learn more</a>
           </li>
           <li>
-            <h3>Lorem ipsum dolor</h3>
+            <h3 class="title">Lorem ipsum dolor</h3>
             <p>
               Amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim
               veniam, quis nostrud exercitation ullamco laboris nisi.
             </p>
-            <a href="">Learn more</a>
+            <a class="button secondary link" href="">Learn more</a>
           </li>
           <li>
-            <h3>Nemo enim ipsam</h3>
+            <h3 class="title">Nemo enim ipsam</h3>
             <p>
               Consequuntur magni dolores eos qui ratione voluptatem sequi
               nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
               sit amet, consectetur, adipisci velit, sed quia non numquam.
             </p>
-            <a href="">Learn more</a>
+            <a class="button secondary link" href="">Learn more</a>
           </li>
           <li>
-            <h3>Tempor incididunt</h3>
+            <h3 class="title">Tempor incididunt</h3>
             <p>
               Eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
               est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
               velit, sed quia non numquam eius modi tempora.
             </p>
-            <a href="">Learn more</a>
+            <a class="button secondary link" href="">Learn more</a>
           </li>
         </ul>
       </section>
 
-      <!-- секция Works (Примеры-работ) -->
-      <section>
-        <h2 hidden>our work section</h2>
-        <ul>
+      <!-- Works секция (Примеры-работ) -->
+      <section class="section">
+        <h2 hidden class="section-title">Examples</h2>
+        <ul class="work-list">
           <li>
             <img
               src="./imag/works/rectangle.jpg"
@@ -107,7 +110,7 @@
               width="750"
               height="440"
             />
-            <h3>Sed ut perspiciatis unde omnis</h3>
+            <h3 class="title">Sed ut perspiciatis unde omnis</h3>
             <p>
               Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
               aut fugit, sed quia consequuntur magni dolores eos qui ratione
@@ -121,7 +124,7 @@
               width="750"
               height="440"
             />
-            <h3>Sed ut perspiciatis unde omnis</h3>
+            <h3 class="title">Sed ut perspiciatis unde omnis</h3>
             <p>
               Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
               aut fugit, sed quia consequuntur magni dolores eos qui ratione
@@ -131,9 +134,9 @@
         </ul>
       </section>
 
-      <!-- секция Testimonials секция-->
-      <section>
-        <h2>You're in good company</h2>
+      <!-- Testimonials секция (Отзывы)-->
+      <section class="section">
+        <h2 class="section-title">You're in good company</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore
@@ -222,22 +225,24 @@
         </ul>
       </section>
 
-      <!-- Signup секция (регистрация)-->
-      <section>
-        <h2 hidden>registration and subscription section</h2>
+      <!-- Signup секция (Регистрация)-->
+      <section class="section">
+        <h2 hidden class="section-title">
+          registration and subscription section
+        </h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore
         </p>
 
         <div>
-          <a href="">Join Today</a>
-          <a href="">Contact us</a>
+          <a class="button primary link" href="">Join Today</a>
+          <a class="button secondary link" href="">Contact us</a>
         </div>
       </section>
     </main>
 
-    <!-- секция Footer-->
+    <!-- Footer секция (Подвал сайта) -->
     <footer>
       <footer>
         <ul>

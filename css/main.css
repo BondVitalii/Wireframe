@@ -1,0 +1,15 @@
+/*__________ Hero section __________*/
+.hero-title {
+  color: var(--title-text-color);
+}
+/*__________ Feature section __________*/
+.feature-list .title {
+  color: var(--title-text-color);
+}
+.feature-list .link {
+  color: var(--accent-color);
+}
+/*__________ Works section __________*/
+.work-list .title {
+  color: var(--title-text-color);
+}
