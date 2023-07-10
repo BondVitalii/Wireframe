@@ -1,0 +1,24 @@
+/*__________ Header section __________*/
+.logo {
+  color: var(--title-text-color);
+}
+.logo:hover {
+  --new-accent: rgb(0, 94, 255);
+  color: var(--new-accent);
+}
+.site-nav .link {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.225px;
+
+  color: var(--accent-color);
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--title-text-color);
+}
+.site-nav .link.current {
+  color: var(--title-text-color);
+}
