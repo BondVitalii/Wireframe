@@ -31,7 +31,6 @@ body {
   font-weight: 400;
   line-height: 1.67;
   letter-spacing: -0.27px;
-
   color: var(--primary-text-color);
   background-color: var(--primary-white-color);
 }
@@ -40,7 +39,6 @@ body {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: -0.72px;
-
   color: var(--title-text-color);
 }
 .title {
@@ -49,19 +47,21 @@ body {
   line-height: 1.5;
   letter-spacing: -0.36px;
 }
+.text {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.39;
+  letter-spacing: -0.54px;
+}
 .txt {
   font-size: 15px;
-  /* font-weight: 400; */
   letter-spacing: -0.225px;
 }
 /*_____ button _____*/
 .button {
   text-align: center;
-  font-size: 15px;
   font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.225px;
-
+  line-height: 1.2; /* normal */
   color: var(--title-text-color);
   background-color: var(--primary-white-color);
 }
@@ -72,4 +72,8 @@ body {
 .button.secondary {
   color: var(--accent-color);
   background-color: var(--primary-white-color);
+}
+.btn {
+  font-size: 17px;
+  letter-spacing: -0.255px;
 }
