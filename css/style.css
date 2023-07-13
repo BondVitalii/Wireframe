@@ -2,9 +2,8 @@
 .logo {
   font-family: Comfortaa, cursive;
   font-size: 28px;
-  line-height: normal;
+  line-height: 1.2; /* normal */
   letter-spacing: -0.427px;
-
   color: var(--title-text-color);
 }
 .logo:hover {
@@ -12,11 +11,8 @@
   color: var(--new-accent);
 }
 .site-nav .link {
-  /* font-size: 15px; */
   font-weight: 500;
-  line-height: normal;
-  /* letter-spacing: -0.225px; */
-
+  line-height: 1.2; /* normal */
   color: var(--accent-color);
 }
 .site-nav .link:hover,
@@ -26,50 +22,40 @@
 .site-nav .link.current {
   color: var(--title-text-color);
 }
-/*__________ Hero section __________*/
+/*__________ Hero section 1 __________*/
 .hero-title {
   text-align: center;
   font-size: 56px;
   font-weight: 400;
   line-height: 1.43;
   letter-spacing: -0.84px;
-
   color: var(--title-text-color);
 }
-.hero .button {
-  font-size: 17px;
-}
-/*__________ Feature section __________*/
+/*__________ Feature section 2 __________*/
 .feature-list .title {
   color: var(--title-text-color);
 }
 .feature-list .link {
   color: var(--accent-color);
 }
-/*__________ Works section __________*/
+/*__________ Works section 3 __________*/
 .work-list .title {
   color: var(--title-text-color);
 }
-/*__________ Signup section __________*/
-.signup-text {
-  font-family: Montserrat;
-  font-size: 36px;
-  /* font-weight: 400; */
-  line-height: 1.39;
-  letter-spacing: -0.54px;
+/*__________ Testimonials section 4 __________*/
+.testimonials .text,
+.testimonials .section-title {
+  text-align: center;
 }
+/*__________ Signup section 5 __________*/
+
 /*__________ Footer section __________*/
-.footer-nav.txt .link {
-  /* font-size: 15px; */
+.footer-nav .link {
   font-weight: 700;
   line-height: 1.6;
-  /* letter-spacing: -0.225px; */
-
   color: var(--title-text-color);
 }
 .footer-text {
   text-align: center;
-  /* font-size: 15px; */
   line-height: 1.6;
-  /* letter-spacing: -0.225px; */
 }
