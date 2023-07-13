@@ -1,0 +1,75 @@
+/*__________ Header section __________*/
+.logo {
+  font-family: Comfortaa, cursive;
+  font-size: 28px;
+  line-height: normal;
+  letter-spacing: -0.427px;
+
+  color: var(--title-text-color);
+}
+.logo:hover {
+  --new-accent: rgb(0, 94, 255);
+  color: var(--new-accent);
+}
+.site-nav .link {
+  /* font-size: 15px; */
+  font-weight: 500;
+  line-height: normal;
+  /* letter-spacing: -0.225px; */
+
+  color: var(--accent-color);
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--title-text-color);
+}
+.site-nav .link.current {
+  color: var(--title-text-color);
+}
+/*__________ Hero section __________*/
+.hero-title {
+  text-align: center;
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: -0.84px;
+
+  color: var(--title-text-color);
+}
+.hero .button {
+  font-size: 17px;
+}
+/*__________ Feature section __________*/
+.feature-list .title {
+  color: var(--title-text-color);
+}
+.feature-list .link {
+  color: var(--accent-color);
+}
+/*__________ Works section __________*/
+.work-list .title {
+  color: var(--title-text-color);
+}
+/*__________ Signup section __________*/
+.signup-text {
+  font-family: Montserrat;
+  font-size: 36px;
+  /* font-weight: 400; */
+  line-height: 1.39;
+  letter-spacing: -0.54px;
+}
+/*__________ Footer section __________*/
+.footer-nav.txt .link {
+  /* font-size: 15px; */
+  font-weight: 700;
+  line-height: 1.6;
+  /* letter-spacing: -0.225px; */
+
+  color: var(--title-text-color);
+}
+.footer-text {
+  text-align: center;
+  /* font-size: 15px; */
+  line-height: 1.6;
+  /* letter-spacing: -0.225px; */
+}

@@ -1,4 +1,4 @@
-/* variable colors */
+/*__________ variable colors __________*/
 :root {
   --primary-text-color: rgba(0, 0, 0, 0.8);
   --title-text-color: #000000;
@@ -7,8 +7,7 @@
   --secondary-light-color: #f5f5f5;
   --complementary-color: #e5e5e5;
 }
-/* ___________________________________________ */
-/* Reset style */
+/*__________ Reset style __________*/
 h1,
 h2,
 h3,
@@ -21,31 +20,48 @@ li {
   margin: 0;
   padding: 0;
 }
-/* .list {
-  list-style: none;
-} */
 .link {
   text-decoration: none;
 }
-/* ___________________________________________ */
-/* Basic style */
+/*__________ Basic style __________*/
 body {
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 1.67;
   letter-spacing: -0.27px;
 
   color: var(--primary-text-color);
   background-color: var(--primary-white-color);
 }
-
 .section-title {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.72px;
+
   color: var(--title-text-color);
 }
-/* button */
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.36px;
+}
+.txt {
+  font-size: 15px;
+  /* font-weight: 400; */
+  letter-spacing: -0.225px;
+}
+/*_____ button _____*/
 .button {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.225px;
+
   color: var(--title-text-color);
   background-color: var(--primary-white-color);
 }
