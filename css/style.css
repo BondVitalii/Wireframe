@@ -23,8 +23,11 @@
   color: var(--title-text-color);
 }
 /*__________ Hero section 1 __________*/
-.hero-title {
+.hero {
   text-align: center;
+}
+.hero-title {
+  margin-bottom: 40px;
   font-size: 56px;
   font-weight: 400;
   line-height: 1.43;
@@ -32,20 +35,41 @@
   color: var(--title-text-color);
 }
 /*__________ Feature section 2 __________*/
-.feature-list .title {
+.feature .section-title {
+  margin-bottom: 60px;
+}
+.feature-list .title,
+.work-list .title {
+  margin-bottom: 24px;
   color: var(--title-text-color);
+}
+.description {
+  margin-bottom: 32px;
+}
+.feature .button.secondary {
+  padding: 11px 22px;
 }
 .feature-list .link {
   color: var(--accent-color);
 }
 /*__________ Works section 3 __________*/
-.work-list .title {
-  color: var(--title-text-color);
+.work-list > .item {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: var(--primary-white-color);
+}
+.work-list > .item:nth-child(2n) {
+  background-color: var(--secondary-light-color);
 }
 /*__________ Testimonials section 4 __________*/
-.testimonials .text,
+
 .testimonials .section-title {
   text-align: center;
+  margin-bottom: 30px;
+}
+.testimonials .text {
+  text-align: center;
+  margin-bottom: 80px;
 }
 /*__________ Signup section 5 __________*/
 
@@ -58,4 +82,7 @@
 .footer-text {
   text-align: center;
   line-height: 1.6;
+}
+.footer-social-list {
+  margin-bottom: 40px;
 }
