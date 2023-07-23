@@ -8,6 +8,18 @@
   --complementary-color: #e5e5e5;
 }
 /*__________ Reset style __________*/
+
+/* Нормализация (box-sizing: border-box;) 
+После подключения modern-normalize в теге head, этот кастыль нам не нужен!
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+} */
 h1,
 h2,
 h3,
@@ -19,6 +31,9 @@ ul,
 li {
   margin: 0;
   padding: 0;
+}
+.list {
+  list-style: none;
 }
 .link {
   text-decoration: none;
@@ -34,6 +49,29 @@ body {
   color: var(--primary-text-color);
   background-color: var(--primary-white-color);
 }
+/*__________ common styles__________ */
+/* Section */
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.section.no-padding {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+/* .section.color {
+  background-color: var(--secondary-light-color);
+} */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1560px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  outline: 1px solid red;
+}
+/* Text style */
 .section-title {
   font-size: 48px;
   font-weight: 400;
@@ -57,13 +95,26 @@ body {
   font-size: 15px;
   letter-spacing: -0.225px;
 }
-/*_____ button _____*/
+/* Button */
 .button {
-  text-align: center;
+  display: inline-block;
+  min-width: 130px;
+  border-radius: 6px;
+  padding: 11px 34px;
+  border: 1px solid transparent;
+
+  font-size: 15px;
   font-weight: 500;
   line-height: 1.2; /* normal */
+  text-align: center;
+  text-decoration: none;
+
   color: var(--title-text-color);
   background-color: var(--primary-white-color);
+}
+.btn {
+  font-size: 17px;
+  padding: 15px 50px;
 }
 .button.primary {
   color: var(--primary-white-color);
@@ -72,8 +123,5 @@ body {
 .button.secondary {
   color: var(--accent-color);
   background-color: var(--primary-white-color);
-}
-.btn {
-  font-size: 17px;
-  letter-spacing: -0.255px;
+  border-color: var(--accent-color);
 }

@@ -5,17 +5,28 @@
     <meta name="description" content="Wireframe site" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wireframe</title>
+    <!-- Foont family -->
     <link
       href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- modern-normalize styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- My styles -->
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
+
   <body>
     <!-- Header секция (Шапка сайта)-->
     <header>
-      <nav>
+      <nav class="container">
         <a class="logo link" href="./index.html">
           <img
             src="./imag/header/svg/union-2.svg"
@@ -23,7 +34,7 @@
           />photo
         </a>
 
-        <ul class="site-nav txt">
+        <ul class="site-nav txt list">
           <li>
             <a class="link current" href="">Features</a>
           </li>
@@ -38,7 +49,7 @@
           </li>
         </ul>
 
-        <ul class="auth-nav">
+        <ul class="auth-nav list">
           <li>
             <a class="button secondary txt link" href="">Log in</a>
           </li>
@@ -57,269 +68,283 @@
       </section>
 
       <!-- Feature секция (Преимушества 2)-->
-      <section class="section">
-        <h2 class="section-title">
-          Snap photos and share like <br />
-          never before
-        </h2>
-        <ul class="feature-list">
-          <li>
-            <h3 class="title">Sed ut perspiciatis</h3>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est.
-            </p>
-            <a class="button secondary txt link" href="">Learn more</a>
-          </li>
-          <li>
-            <h3 class="title">Lorem ipsum dolor</h3>
-            <p>
-              Amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi.
-            </p>
-            <a class="button secondary txt link" href="">Learn more</a>
-          </li>
-          <li>
-            <h3 class="title">Nemo enim ipsam</h3>
-            <p>
-              Consequuntur magni dolores eos qui ratione voluptatem sequi
-              nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-              sit amet, consectetur, adipisci velit, sed quia non numquam.
-            </p>
-            <a class="button secondary txt link" href="">Learn more</a>
-          </li>
-          <li>
-            <h3 class="title">Tempor incididunt</h3>
-            <p>
-              Eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-              velit, sed quia non numquam eius modi tempora.
-            </p>
-            <a class="button secondary txt link" href="">Learn more</a>
-          </li>
-        </ul>
+      <section class="section feature">
+        <div class="container">
+          <h2 class="section-title">
+            Snap photos and share like <br />
+            never before
+          </h2>
+          <ul class="feature-list list">
+            <li>
+              <h3 class="title">Sed ut perspiciatis</h3>
+              <p class="description">
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                voluptatem sequi nesciunt. Neque porro quisquam est.
+              </p>
+              <a class="button secondary txt link" href="">Learn more</a>
+            </li>
+            <li>
+              <h3 class="title">Lorem ipsum dolor</h3>
+              <p class="description">
+                Amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi.
+              </p>
+              <a class="button secondary txt link" href="">Learn more</a>
+            </li>
+            <li>
+              <h3 class="title">Nemo enim ipsam</h3>
+              <p class="description">
+                Consequuntur magni dolores eos qui ratione voluptatem sequi
+                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+                sit amet, consectetur, adipisci velit, sed quia non numquam.
+              </p>
+              <a class="button secondary txt link" href="">Learn more</a>
+            </li>
+            <li>
+              <h3 class="title">Tempor incididunt</h3>
+              <p class="description">
+                Eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                adipisci velit, sed quia non numquam eius modi tempora.
+              </p>
+              <a class="button secondary txt link" href="">Learn more</a>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- Works секция (Примеры-работ 3) -->
-      <section class="section">
-        <h2 hidden class="section-title">Examples</h2>
-        <ul class="work-list">
-          <li>
-            <img
-              src="./imag/works/rectangle.jpg"
-              alt="Голубая лагуна"
-              width="750"
-              height="440"
-            />
-            <h3 class="title">Sed ut perspiciatis unde omnis</h3>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
-            </p>
-          </li>
-          <li>
-            <img
-              src="./imag/works/rectangle.jpg"
-              alt="Голубая лагуна"
-              width="750"
-              height="440"
-            />
-            <h3 class="title">Sed ut perspiciatis unde omnis</h3>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
-            </p>
-          </li>
-        </ul>
+      <section class="section no-padding">
+        <div class="container">
+          <h2 hidden class="section-title">Examples</h2>
+          <ul class="work-list list">
+            <li class="item">
+              <img
+                src="./imag/works/rectangle.jpg"
+                alt="Голубая лагуна"
+                width="750"
+                height="440"
+              />
+              <h3 class="title">Sed ut perspiciatis unde omnis</h3>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                voluptatem sequi nesciunt. Neque porro quisquam est, qui
+                dolorem.
+              </p>
+            </li>
+            <li class="item">
+              <img
+                src="./imag/works/rectangle.jpg"
+                alt="Голубая лагуна"
+                width="750"
+                height="440"
+              />
+              <h3 class="title">Sed ut perspiciatis unde omnis</h3>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                voluptatem sequi nesciunt. Neque porro quisquam est, qui
+                dolorem.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- Testimonials секция (Отзывы 4)-->
       <section class="section testimonials">
-        <h2 class="section-title">You're in good company</h2>
-        <p class="text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore
-        </p>
-        <ul>
-          <li>
-            <a href="">
-              <img
-                src="./imag/testimonials/rectangle-testimonials.jpg"
-                alt="Зимний лес"
-                width="173"
-                height="76"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img
-                src="./imag/testimonials/rectangle-testimonials.jpg"
-                alt="Зимний лес"
-                width="173"
-                height="76"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img
-                src="./imag/testimonials/rectangle-testimonials.jpg"
-                alt="Зимний лес"
-                width="173"
-                height="76"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img
-                src="./imag/testimonials/rectangle-testimonials.jpg"
-                alt="Зимний лес"
-                width="173"
-                height="76"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img
-                src="./imag/testimonials/rectangle-testimonials.jpg"
-                alt="Зимний лес"
-                width="173"
-                height="76"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img
-                src="./imag/testimonials/rectangle-testimonials.jpg"
-                alt="Зимний лес"
-                width="173"
-                height="76"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img
-                src="./imag/testimonials/rectangle-testimonials.jpg"
-                alt="Зимний лес"
-                width="173"
-                height="76"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img
-                src="./imag/testimonials/rectangle-testimonials.jpg"
-                alt="Зимний лес"
-                width="173"
-                height="76"
-              />
-            </a>
-          </li>
-        </ul>
+        <div class="container">
+          <h2 class="section-title">You're in good company</h2>
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore
+          </p>
+          <ul class="list">
+            <li>
+              <a href="">
+                <img
+                  src="./imag/testimonials/rectangle-testimonials.jpg"
+                  alt="Зимний лес"
+                  width="173"
+                  height="76"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="./imag/testimonials/rectangle-testimonials.jpg"
+                  alt="Зимний лес"
+                  width="173"
+                  height="76"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="./imag/testimonials/rectangle-testimonials.jpg"
+                  alt="Зимний лес"
+                  width="173"
+                  height="76"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="./imag/testimonials/rectangle-testimonials.jpg"
+                  alt="Зимний лес"
+                  width="173"
+                  height="76"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="./imag/testimonials/rectangle-testimonials.jpg"
+                  alt="Зимний лес"
+                  width="173"
+                  height="76"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="./imag/testimonials/rectangle-testimonials.jpg"
+                  alt="Зимний лес"
+                  width="173"
+                  height="76"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="./imag/testimonials/rectangle-testimonials.jpg"
+                  alt="Зимний лес"
+                  width="173"
+                  height="76"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="./imag/testimonials/rectangle-testimonials.jpg"
+                  alt="Зимний лес"
+                  width="173"
+                  height="76"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- Signup секция (Регистрация 5)-->
       <section class="section">
-        <h2 hidden class="section-title">
-          registration and subscription section
-        </h2>
-        <p class="text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore
-        </p>
+        <div class="container">
+          <h2 hidden class="section-title">
+            registration and subscription section
+          </h2>
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore
+          </p>
 
-        <div>
-          <a class="button primary btn link" href="">Join Today</a>
-          <a class="button secondary btn link" href="">Contact us</a>
+          <div>
+            <a class="button primary btn link" href="">Join Today</a>
+            <a class="button secondary btn link" href="">Contact us</a>
+          </div>
         </div>
       </section>
     </main>
 
     <!-- Footer секция (Подвал сайта) -->
-    <footer>
-      <ul class="footer-nav txt">
-        <li>
-          <a class="link" href="">Mobile app</a>
-        </li>
-        <li>
-          <a class="link" href="">Community</a>
-        </li>
-        <li>
-          <a class="link" href="">Company</a>
-        </li>
-      </ul>
+    <footer class="section">
+      <div class="container">
+        <ul class="footer-nav txt list">
+          <li>
+            <a class="link" href="">Mobile app</a>
+          </li>
+          <li>
+            <a class="link" href="">Community</a>
+          </li>
+          <li>
+            <a class="link" href="">Company</a>
+          </li>
+        </ul>
 
-      <a class="logo link" href="./index.html">
-        <img src="./imag/footer/union-2.svg" alt="Логотип компании" />
-        photo
-      </a>
+        <a class="logo link" href="./index.html">
+          <img src="./imag/footer/union-2.svg" alt="Логотип компании" />
+          photo
+        </a>
 
-      <ul class="footer-nav txt">
-        <li>
-          <a class="link" href="">Help desk</a>
-        </li>
-        <li>
-          <a class="link" href="">Blog</a>
-        </li>
-        <li>
-          <a class="link" href="">Resources</a>
-        </li>
-      </ul>
+        <ul class="footer-nav txt list">
+          <li>
+            <a class="link" href="">Help desk</a>
+          </li>
+          <li>
+            <a class="link" href="">Blog</a>
+          </li>
+          <li>
+            <a class="link" href="">Resources</a>
+          </li>
+        </ul>
 
-      <ul>
-        <li>
-          <a href="" aria-label="Ссылка на Facebook"
-            ><img
-              src="./imag/footer/ellipse.svg"
-              alt="link facebook"
-              width="44"
-              height="44"
-            />
-          </a>
-        </li>
-        <li>
-          <a href="" aria-label="Ссылка на Twitter"
-            ><img
-              src="./imag/footer/ellipse.svg"
-              alt="link twitter"
-              width="44"
-              height="44"
-            />
-          </a>
-        </li>
-        <li>
-          <a href="" aria-label="Ссылка на Instagram"
-            ><img
-              src="./imag/footer/ellipse.svg"
-              alt="link instagram"
-              width="44"
-              height="44"
-            />
-          </a>
-        </li>
-        <li>
-          <a href="" aria-label="Ссылка на LinkedIn"
-            ><img
-              src="./imag/footer/ellipse.svg"
-              alt="link linkedin"
-              width="44"
-              height="44"
-            />
-          </a>
-        </li>
-      </ul>
+        <ul class="footer-social-list list">
+          <li>
+            <a href="" aria-label="Ссылка на Facebook"
+              ><img
+                src="./imag/footer/ellipse.svg"
+                alt="link facebook"
+                width="44"
+                height="44"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="" aria-label="Ссылка на Twitter"
+              ><img
+                src="./imag/footer/ellipse.svg"
+                alt="link twitter"
+                width="44"
+                height="44"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="" aria-label="Ссылка на Instagram"
+              ><img
+                src="./imag/footer/ellipse.svg"
+                alt="link instagram"
+                width="44"
+                height="44"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="" aria-label="Ссылка на LinkedIn"
+              ><img
+                src="./imag/footer/ellipse.svg"
+                alt="link linkedin"
+                width="44"
+                height="44"
+              />
+            </a>
+          </li>
+        </ul>
 
-      <p class="footer-text txt">&#169; Photo, Inc. 2019. We love our users!</p>
+        <p class="footer-text txt">
+          &#169; Photo, Inc. 2019. We love our users!
+        </p>
+      </div>
     </footer>
   </body>
 </html>
