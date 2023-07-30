@@ -25,8 +25,8 @@
 
   <body>
     <!-- Header секция (Шапка сайта)-->
-    <header>
-      <nav class="container">
+    <header class="header">
+      <nav class="container main-nav">
         <a class="logo link" href="./index.html">
           <img
             src="./imag/header/svg/union-2.svg"
@@ -35,25 +35,25 @@
         </a>
 
         <ul class="site-nav txt list">
-          <li>
+          <li class="item">
             <a class="link current" href="">Features</a>
           </li>
-          <li>
+          <li class="item">
             <a class="link" href="">Pricing</a>
           </li>
-          <li>
+          <li class="item">
             <a class="link" href="">Community</a>
           </li>
-          <li>
+          <li class="item">
             <a class="link" href="">Support</a>
           </li>
         </ul>
 
         <ul class="auth-nav list">
-          <li>
+          <li class="item">
             <a class="button secondary txt link" href="">Log in</a>
           </li>
-          <li>
+          <li class="item">
             <a class="button primary txt link" href="">Register</a>
           </li>
         </ul>
@@ -75,7 +75,7 @@
             never before
           </h2>
           <ul class="feature-list list">
-            <li>
+            <li class="item">
               <h3 class="title">Sed ut perspiciatis</h3>
               <p class="description">
                 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
@@ -84,7 +84,7 @@
               </p>
               <a class="button secondary txt link" href="">Learn more</a>
             </li>
-            <li>
+            <li class="item">
               <h3 class="title">Lorem ipsum dolor</h3>
               <p class="description">
                 Amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -93,7 +93,7 @@
               </p>
               <a class="button secondary txt link" href="">Learn more</a>
             </li>
-            <li>
+            <li class="item">
               <h3 class="title">Nemo enim ipsam</h3>
               <p class="description">
                 Consequuntur magni dolores eos qui ratione voluptatem sequi
@@ -102,7 +102,7 @@
               </p>
               <a class="button secondary txt link" href="">Learn more</a>
             </li>
-            <li>
+            <li class="item">
               <h3 class="title">Tempor incididunt</h3>
               <p class="description">
                 Eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
@@ -127,13 +127,15 @@
                 width="750"
                 height="440"
               />
-              <h3 class="title">Sed ut perspiciatis unde omnis</h3>
-              <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                voluptatem sequi nesciunt. Neque porro quisquam est, qui
-                dolorem.
-              </p>
+              <div class="work-content">
+                <h3 class="title">Sed ut perspiciatis unde omnis</h3>
+                <p>
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                  qui dolorem.
+                </p>
+              </div>
             </li>
             <li class="item">
               <img
@@ -142,13 +144,15 @@
                 width="750"
                 height="440"
               />
-              <h3 class="title">Sed ut perspiciatis unde omnis</h3>
-              <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                voluptatem sequi nesciunt. Neque porro quisquam est, qui
-                dolorem.
-              </p>
+              <div class="work-content">
+                <h3 class="title">Sed ut perspiciatis unde omnis</h3>
+                <p>
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                  qui dolorem.
+                </p>
+              </div>
             </li>
           </ul>
         </div>
@@ -162,8 +166,18 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore
           </p>
-          <ul class="list">
-            <li>
+          <ul class="clients-list list">
+            <li class="clients-item">
+              <a class="link" href="">
+                <img
+                  src="./imag/testimonials/rectangle-testimonials.jpg"
+                  alt="Зимний лес"
+                  width="173"
+                  height="76"
+                />
+              </a>
+            </li>
+            <li class="clients-item">
               <a href="">
                 <img
                   src="./imag/testimonials/rectangle-testimonials.jpg"
@@ -173,7 +187,7 @@
                 />
               </a>
             </li>
-            <li>
+            <li class="clients-item">
               <a href="">
                 <img
                   src="./imag/testimonials/rectangle-testimonials.jpg"
@@ -183,7 +197,7 @@
                 />
               </a>
             </li>
-            <li>
+            <li class="clients-item">
               <a href="">
                 <img
                   src="./imag/testimonials/rectangle-testimonials.jpg"
@@ -193,7 +207,7 @@
                 />
               </a>
             </li>
-            <li>
+            <li class="clients-item">
               <a href="">
                 <img
                   src="./imag/testimonials/rectangle-testimonials.jpg"
@@ -203,7 +217,7 @@
                 />
               </a>
             </li>
-            <li>
+            <li class="clients-item">
               <a href="">
                 <img
                   src="./imag/testimonials/rectangle-testimonials.jpg"
@@ -213,7 +227,7 @@
                 />
               </a>
             </li>
-            <li>
+            <li class="clients-item">
               <a href="">
                 <img
                   src="./imag/testimonials/rectangle-testimonials.jpg"
@@ -223,17 +237,7 @@
                 />
               </a>
             </li>
-            <li>
-              <a href="">
-                <img
-                  src="./imag/testimonials/rectangle-testimonials.jpg"
-                  alt="Зимний лес"
-                  width="173"
-                  height="76"
-                />
-              </a>
-            </li>
-            <li>
+            <li class="clients-item">
               <a href="">
                 <img
                   src="./imag/testimonials/rectangle-testimonials.jpg"
@@ -248,17 +252,15 @@
       </section>
 
       <!-- Signup секция (Регистрация 5)-->
-      <section class="section">
+      <section class="signup-section section">
         <div class="container">
-          <h2 hidden class="section-title">
-            registration and subscription section
-          </h2>
+          <h2 class="section-title">registration and subscription section</h2>
           <p class="text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore
           </p>
 
-          <div>
+          <div class="signup-wrapper">
             <a class="button primary btn link" href="">Join Today</a>
             <a class="button secondary btn link" href="">Contact us</a>
           </div>
@@ -269,34 +271,36 @@
     <!-- Footer секция (Подвал сайта) -->
     <footer class="section">
       <div class="container">
-        <ul class="footer-nav txt list">
-          <li>
-            <a class="link" href="">Mobile app</a>
-          </li>
-          <li>
-            <a class="link" href="">Community</a>
-          </li>
-          <li>
-            <a class="link" href="">Company</a>
-          </li>
-        </ul>
+        <div class="footer-wrapper">
+          <ul class="footer-nav txt list">
+            <li class="footer-item">
+              <a class="link" href="">Mobile app</a>
+            </li>
+            <li class="footer-item">
+              <a class="link" href="">Community</a>
+            </li>
+            <li class="footer-item">
+              <a class="link" href="">Company</a>
+            </li>
+          </ul>
 
-        <a class="logo link" href="./index.html">
-          <img src="./imag/footer/union-2.svg" alt="Логотип компании" />
-          photo
-        </a>
+          <a class="logo link" href="./index.html">
+            <img src="./imag/footer/union-2.svg" alt="Логотип компании" />
+            photo
+          </a>
 
-        <ul class="footer-nav txt list">
-          <li>
-            <a class="link" href="">Help desk</a>
-          </li>
-          <li>
-            <a class="link" href="">Blog</a>
-          </li>
-          <li>
-            <a class="link" href="">Resources</a>
-          </li>
-        </ul>
+          <ul class="footer-nav txt list">
+            <li class="footer-item right">
+              <a class="link" href="">Help desk</a>
+            </li>
+            <li class="footer-item right">
+              <a class="link" href="">Blog</a>
+            </li>
+            <li class="footer-item right">
+              <a class="link" href="">Resources</a>
+            </li>
+          </ul>
+        </div>
 
         <ul class="footer-social-list list">
           <li>
