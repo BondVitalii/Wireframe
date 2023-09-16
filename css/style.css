@@ -69,14 +69,12 @@
 .header .logo {
   margin-right: 70px;
 }
-.header-icon-logo {
-  display: block;
-  fill: #000000;
-  stroke: #000000;
+.icon-logo {
+  /* display: block; */
   margin-right: 12px;
 }
 .logo {
-  display: block;
+  /* display: block; */
   display: flex;
   align-items: center;
 }
@@ -91,17 +89,6 @@
   --new-accent: #18a0fb;
   color: var(--new-accent);
 }
-/* .logo {
-  font-family: var(--secondary-fonts);
-  font-size: 28px;
-  line-height: 1.2;
-  letter-spacing: -0.427px;
-  color: var(--black-text-color);
-} */
-/* .logo:hover {
-  --new-accent: #18a0fb;
-  color: var(--new-accent);
-} */
 .site-nav {
   display: flex;
 }
@@ -165,7 +152,7 @@
   height: 4px;
 
   border-radius: 2px;
-  background-color: var(--black-text-color);
+  background-color: var(--accent-bg-color);
 }
 .auth-nav {
   display: flex;
