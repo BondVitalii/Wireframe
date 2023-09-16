@@ -25,13 +25,17 @@
 
   <body>
     <!-- Header секция (Шапка сайта)-->
-    <header class="header">
+    <header class="header page-header">
       <nav class="container header-nav">
         <a class="logo link" href="./index.html">
-          <img
+          <svg class="header-icon-logo" width="22" height="22">
+            <use href="./imag/icons-color.svg#icon-logo"></use>
+          </svg>
+          <p class="logo-text">photo</p>
+          <!-- <img
             src="./imag/header/svg/union-2.svg"
             alt="Логотип компании"
-          />photo
+          />photo -->
         </a>
 
         <ul class="site-nav txt list">
@@ -117,6 +121,49 @@
 
       <!-- Works секция (Примеры-работ 3) -->
       <section class="section no-padding">
+        <!-- <div class="container"> -->
+        <h2 hidden class="section-title">Examples</h2>
+        <ul class="work-list list">
+          <li class="item">
+            <img
+              src="./imag/works/rectangle.jpg"
+              alt="Голубая лагуна"
+              width="750"
+              height="440"
+            />
+            <div class="work-content">
+              <h3 class="title">Sed ut perspiciatis unde omnis</h3>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                voluptatem sequi nesciunt. Neque porro quisquam est, qui
+                dolorem.
+              </p>
+            </div>
+          </li>
+          <li class="item">
+            <img
+              src="./imag/works/rectangle.jpg"
+              alt="Голубая лагуна"
+              width="750"
+              height="440"
+            />
+            <div class="work-content">
+              <h3 class="title">Sed ut perspiciatis unde omnis</h3>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                voluptatem sequi nesciunt. Neque porro quisquam est, qui
+                dolorem.
+              </p>
+            </div>
+          </li>
+        </ul>
+        <!-- </div> -->
+      </section>
+
+      <!-- Репета -->
+      <!-- <section class="section no-padding">
         <div class="container">
           <h2 hidden class="section-title">Examples</h2>
           <ul class="work-list list">
@@ -156,54 +203,6 @@
             </li>
           </ul>
         </div>
-      </section>
-      <!-- XXX -->
-      <!-- <section class="section no-padding">
-        <h2 hidden class="section-title">Examples</h2>
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
-        <ul class="xxx-list list">
-          <li class="item">
-            <div class="xxx-container container">
-              <img
-                src="./imag/works/img-2.jpg"
-                alt="Голубая лагуна"
-                width="750"
-                height="440"
-              />
-              <div class="xxx-content">
-                <h3 class="title">Sed ut perspiciatis unde omnis</h3>
-                <p>
-                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                  odit aut fugit, sed quia consequuntur magni dolores eos qui
-                  ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-                  qui dolorem.
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="item">
-            <div class="xxx-container container">
-              <img
-                src="./imag/works/img-1.jpg"
-                alt="Голубая лагуна"
-                width="750"
-                height="440"
-              />
-              <div class="xxx-content">
-                <h3 class="title">Sed ut perspiciatis unde omnis</h3>
-                <p>
-                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                  odit aut fugit, sed quia consequuntur magni dolores eos qui
-                  ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-                  qui dolorem.
-                </p>
-              </div>
-            </div>
-          </li>
-        </ul>
       </section> -->
 
       <!-- Testimonials секция (Отзывы 4)-->
@@ -317,7 +316,7 @@
     </main>
 
     <!-- Footer секция (Подвал сайта) -->
-    <footer class="section">
+    <footer class="footer section">
       <div class="container">
         <div class="footer-wrapper">
           <ul class="footer-nav txt list">
@@ -332,10 +331,10 @@
             </li>
           </ul>
 
-          <a class="logo link" href="./index.html">
+          <!-- <a class="logo link" href="./index.html">
             <img src="./imag/footer/union-2.svg" alt="Логотип компании" />
             photo
-          </a>
+          </a> -->
 
           <ul class="footer-nav txt list">
             <li class="footer-item right">
@@ -398,5 +397,21 @@
         </p>
       </div>
     </footer>
+
+    <!-- Modal window -->
+    <div>
+      <div>
+        <button type="button">
+          <!-- <svg class="" width="" height="">
+            <use href=""></use>
+          </svg> -->
+        </button>
+      </div>
+    </div>
+
+    <!------- SCRIPTS ------->
+
+    <!-- скрипт для динамической высоты Header (Репета) -->
+    <script src="./js/page-header.js"></script>
   </body>
 </html>
