@@ -83,9 +83,13 @@
   font-size: 28px;
   line-height: 1.2; /* normal */
   letter-spacing: -0.427px;
+
   color: var(--black-text-color);
+
+  transition: color var(--transit);
 }
-.logo-text:hover {
+.logo-text:hover,
+.logo-text:focus {
   --new-accent: #18a0fb;
   color: var(--new-accent);
 }
@@ -132,7 +136,10 @@
   padding-bottom: 21px;
   font-weight: 500;
   line-height: 1.2; /* normal */
+
   color: var(--accent-text-color);
+
+  transition: color var(--transit);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -143,6 +150,7 @@
 }
 .site-nav .link.current::after {
   content: '';
+
   position: absolute;
   left: 0;
   bottom: -1px;
@@ -153,6 +161,12 @@
 
   border-radius: 2px;
   background-color: var(--accent-bg-color);
+
+  transform: scaleX(0.7);
+  transition: transform var(--transit);
+}
+.site-nav .link.current:hover::after {
+  transform: scaleX(1);
 }
 .auth-nav {
   display: flex;
@@ -163,7 +177,7 @@
 }
 /*__________ Hero section 1 __________*/
 .hero.section {
-  padding-top: 632px;
+  padding-top: 414px;
   padding-bottom: 156px;
 }
 .hero {
@@ -171,6 +185,34 @@
   background-color: var(--complementary-bg-cl);
   background-image: linear-gradient(var(--shadow-01), var(--shadow-01)),
     url(../imag/hero/rectangle-hero.jpg);
+}
+.play-btn {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 86px;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 132px;
+  height: 132px;
+
+  padding-left: 42px;
+  padding-right: 30px;
+
+  color: var(--white-bg-color);
+  border-radius: 66px;
+  background-color: var(--accent-bg-color);
+  border-color: transparent;
+
+  cursor: pointer;
+}
+.play-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  fill: currentColor;
 }
 .hero-title {
   margin-bottom: 40px;
@@ -418,13 +460,15 @@ ____________________________________________
   font-weight: 700;
   line-height: 1.6;
   color: var(--black-text-color);
+
+  transition: color var(--transit);
 }
 .footer-item.right > .link {
   text-align: right;
 }
-.footer-text {
-  text-align: center;
-  line-height: 1.6;
+.footer-item:hover .link,
+.footer-item:focus .link {
+  color: var(--accent-text-color);
 }
 .footer-social-list {
   display: flex;
@@ -432,4 +476,103 @@ ____________________________________________
   gap: 20px;
   margin-bottom: 40px;
 }
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  color: var(--white-text-color);
+  background-color: var(--accent-bg-color);
+  border-radius: 50%;
+  border: 3px solid var(--accent-bg-color);
+
+  transition: color var(--transit), background-color var(--transit),
+    border-color var(--transit);
+}
+.social-icon {
+  fill: currentColor;
+}
+.social-link:hover,
+.social-link:focus {
+  color: var(--accent-bg-color);
+  background-color: var(--white-text-color);
+  border-color: var(--accent-bg-color);
+}
+.footer-text {
+  text-align: center;
+  line-height: 1.6;
+}
 /*__________ Modal window __________*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--shadow-04);
+  opacity: 1;
+  transition: opacity var(--transit);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.2);
+}
+.modal {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 450px;
+  min-height: 600px;
+
+  background-color: var(--white-bg-color);
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px 0px var(--shadow-02), 0px 1px 3px 0px var(--shadow-12),
+    0px 1px 1px 0px var(--shadow-14);
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--transit);
+}
+/* close-btn-modal */
+.modal-btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+  padding: 0;
+
+  /* border-radius: 50%; */
+  color: var(--accent-bg-color);
+  background-color: var(--white-bg-color);
+  border: 1px solid var(--accent-bg-color);
+  border-radius: 5px;
+
+  transition: color var(--transit), background-color var(--transit),
+    border-color var(--transit);
+
+  cursor: pointer;
+}
+.modal-icon {
+  fill: currentColor;
+}
+.modal-btn-close:hover,
+.modal-btn-close:active .modal-icon {
+  color: var(--white-bg-color);
+  background-color: var(--accent-bg-color);
+  border-color: transparent;
+}

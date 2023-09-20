@@ -29,7 +29,7 @@
       <nav class="container header-nav">
         <a class="logo link" href="./index.html">
           <svg class="icon-logo" width="22" height="22">
-            <use href="./imag/icons.svg#icon-logo"></use>
+            <use href="./imag/icons.svg#icon-logo-2"></use>
           </svg>
           <p class="logo-text">photo</p>
           <!-- <img
@@ -40,18 +40,20 @@
 
         <ul class="site-nav txt list">
           <li class="item">
-            <a class="link current" href="">Features</a>
+            <a class="link current" href="#feature">Features</a>
           </li>
           <li class="item">
-            <a class="link" href="">Pricing</a>
+            <a class="link" href="#works">Pricing</a>
           </li>
           <li class="item">
-            <a class="link" href="">Community</a>
+            <a class="link" href="#testimonials">Community</a>
           </li>
           <li class="item">
-            <a class="link" href="">Support</a>
+            <a class="link" href="#support">Support</a>
           </li>
         </ul>
+
+        <button class="btn-animation" type="button">Animation</button>
 
         <ul class="auth-nav list">
           <li class="item">
@@ -67,12 +69,23 @@
     <main>
       <!-- Hero секция (Герой 1) -->
       <section class="hero section">
+        <button class="play-btn" type="button">
+          <svg class="play-icon" width="60" height="60">
+            <use href="./imag/icons.svg#icon-polygon"></use>
+          </svg>
+        </button>
+
         <h1 class="hero-title">The largest community of photo enthusiasts</h1>
-        <a class="button primary btn link" href="">Join Today</a>
+        <!-- <a class="button primary btn link" href=""
+          >Join Today</a
+        > -->
+        <button class="button primary btn" type="button" data-modal-open>
+          Join Today
+        </button>
       </section>
 
       <!-- Feature секция (Преимушества 2)-->
-      <section class="section feature">
+      <section class="section feature" id="feature">
         <div class="container">
           <h2 class="section-title">
             Snap photos and share like <br />
@@ -120,7 +133,7 @@
       </section>
 
       <!-- Works секция (Примеры-работ 3) -->
-      <section class="section no-padding">
+      <section class="section no-padding" id="works">
         <!-- <div class="container"> -->
         <h2 hidden class="section-title">Examples</h2>
         <ul class="work-list list">
@@ -206,7 +219,7 @@
       </section> -->
 
       <!-- Testimonials секция (Отзывы 4)-->
-      <section class="section testimonials">
+      <section class="section testimonials" id="testimonials">
         <div class="container">
           <h2 class="section-title">You're in good company</h2>
           <p class="text">
@@ -299,7 +312,7 @@
       </section>
 
       <!-- Signup секция (Регистрация 5)-->
-      <section class="signup-section section">
+      <section class="signup-section section" id="support">
         <div class="container">
           <h2 class="section-title">registration and subscription section</h2>
           <p class="text">
@@ -333,7 +346,7 @@
 
           <a class="logo link" href="./index.html">
             <svg class="icon-logo" width="22" height="22">
-              <use href="./imag/icons.svg#icon-logo"></use>
+              <use href="./imag/icons.svg#icon-logo-all"></use>
             </svg>
             <p class="logo-text">photo</p>
           </a>
@@ -353,43 +366,79 @@
 
         <ul class="footer-social-list list">
           <li>
-            <a href="" aria-label="Ссылка на Facebook"
-              ><img
+            <a
+              class="social-link"
+              href="https://facebook.com"
+              aria-label="Ссылка на Facebook"
+              rel="noopener no-referrer"
+              target="_blank"
+            >
+              <!-- <img
                 src="./imag/footer/ellipse.svg"
                 alt="link facebook"
                 width="44"
                 height="44"
-              />
+              /> -->
+              <svg class="social-icon" width="22" height="22">
+                <use href="./imag/icons.svg#icon-facebook"></use>
+              </svg>
             </a>
           </li>
           <li>
-            <a href="" aria-label="Ссылка на Twitter"
-              ><img
+            <a
+              class="social-link"
+              href="https://instagram.com"
+              aria-label="Ссылка на Instagram"
+              rel="noopener no-referrer"
+              target="_blank"
+            >
+              <!-- <img
                 src="./imag/footer/ellipse.svg"
                 alt="link twitter"
                 width="44"
                 height="44"
-              />
+              /> -->
+              <svg class="social-icon" width="22" height="22">
+                <use href="./imag/icons.svg#icon-instagram"></use>
+              </svg>
             </a>
           </li>
           <li>
-            <a href="" aria-label="Ссылка на Instagram"
-              ><img
+            <a
+              class="social-link"
+              href="https://linkedin.com"
+              aria-label="Ссылка на LinkedIn"
+              rel="noopener no-referrer"
+              target="_blank"
+            >
+              <!-- <img
                 src="./imag/footer/ellipse.svg"
                 alt="link instagram"
                 width="44"
                 height="44"
-              />
+              /> -->
+              <svg class="social-icon" width="22" height="22">
+                <use href="./imag/icons.svg#icon-linkedin"></use>
+              </svg>
             </a>
           </li>
           <li>
-            <a href="" aria-label="Ссылка на LinkedIn"
-              ><img
+            <a
+              class="social-link"
+              href="https://twiter.com"
+              aria-label="Ссылка на Twitter"
+              rel="noopener no-referrer"
+              target="_blank"
+            >
+              <!-- <img
                 src="./imag/footer/ellipse.svg"
                 alt="link linkedin"
                 width="44"
                 height="44"
-              />
+              /> -->
+              <svg class="social-icon" width="22" height="22">
+                <use href="./imag/icons.svg#icon-twitter"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -401,12 +450,12 @@
     </footer>
 
     <!-- Modal window -->
-    <div>
-      <div>
-        <button type="button">
-          <!-- <svg class="" width="" height="">
-            <use href=""></use>
-          </svg> -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn-close" type="button" data-modal-close>
+          <svg class="modal-icon" width="10" height="10">
+            <use href="./imag/icons.svg#icon-close"></use>
+          </svg>
         </button>
       </div>
     </div>
@@ -415,5 +464,7 @@
 
     <!-- скрипт для динамической высоты Header (Репета) -->
     <script src="./js/page-header.js"></script>
+    <!-- скрипт для (Modal-window) -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>
