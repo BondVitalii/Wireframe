@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Wireframe site" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wireframe</title>
+    <!-- Foont family -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- modern-normalize styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- My styles -->
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/form-2-2.css" />
+  </head>
+
+  <body>
+    <!-- Header секция (Шапка сайта)-->
+    <header class="header page-header">
+      <nav class="container header-nav">
+        <a class="logo link" href="./index.html">
+          <svg class="icon-logo" width="22" height="22">
+            <use href="./imag/icons.svg#icon-logo-2"></use>
+          </svg>
+          <p class="logo-text">photo</p>
+        </a>
+
+        <ul class="site-nav txt list">
+          <li class="item">
+            <a class="link" href="./index.html">Features</a>
+          </li>
+          <li class="item">
+            <a class="link" href="./form-1.html">Form-1</a>
+          </li>
+          <li class="item">
+            <a class="link" href="./form-2-1.html">Form-2-1-Old</a>
+          </li>
+          <li class="item">
+            <a class="link" href="./form-2-2.html">Form-2-2-New</a>
+          </li>
+          <li class="item">
+            <a class="link current" href="./form-not-id.html">Form-not-id</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- ----- Form-modal Form-Занятие-2-модуль-6 ----- -->
+
+      <form class="form" autocomplete=" off">
+        <div class="form-field">
+          <input
+            class="form-input"
+            type="text"
+            name="name"
+            id="name"
+            placeholder=" "
+          />
+          <label class="form-label" for="name">Имя</label>
+          <svg class="icon-form" width="20" height="20">
+            <use href="./imag/icons.svg#icon-user"></use>
+          </svg>
+        </div>
+
+        <div class="form-field">
+          <input
+            class="form-input"
+            type="email"
+            name="mail"
+            id="mail"
+            placeholder=" "
+          />
+          <label class="form-label" for="mail">Почта</label>
+          <svg class="icon-form" width="20" height="20">
+            <use href="./imag/icons.svg#icon-mail"></use>
+          </svg>
+        </div>
+
+        <!-- Кнопка отправки формы -->
+        <button class="form-btn" type="submit">Оставить заявку</button>
+      </form>
+    </main>
+
+    <!------- SCRIPTS ------->
+    <!-- скрипт для динамической высоты Header (Репета) -->
+    <script src="./js/page-header.js"></script>
+  </body>
+</html>

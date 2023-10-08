@@ -1,0 +1,108 @@
+/*---------- FORM-MODAL ----------*/
+
+/* Занятие-1-модуль-6 */
+
+.form {
+  width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  padding: 30px 20px 20px;
+
+  outline: 1px solid var(--shadow-04);
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.form-field label {
+  margin-bottom: 4px;
+  font-size: 15px;
+}
+.form-field input {
+  margin: 0;
+  padding: 4px 6px;
+  border: 1px solid var(--accent-bg-color);
+  border-radius: 3px;
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  /* --new-color: rgba(0, 0, 0, 0.6);
+  color: var(--new-color); */
+  color: red;
+  font-size: 15px;
+}
+.group {
+  margin-bottom: 8px;
+}
+.group-title {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 18px;
+}
+.topic-options,
+.expirience-options {
+  font-size: 14px;
+  color: blue;
+}
+.topic-options li,
+.expirience-options li {
+  display: flex;
+  align-items: center;
+}
+.topic-options input[type='checkbox'] {
+}
+.topic-options input,
+.expirience-options input {
+  margin-right: 6px;
+}
+/* ---------- Дата доклада ---------- */
+.form .date {
+  font-size: 15px;
+  color: green;
+  border: 4px solid blueviolet;
+}
+/* ---------- Поле коментария ---------- */
+/* Запрет растягивать поле
+textarea { resize: none;} - Это запрет пользователь растягивать поле */
+
+textarea {
+  resize: none;
+}
+.comment {
+  height: 100px;
+  padding: 10px;
+  border: 1px solid blue;
+  border-radius: 10px;
+}
+/* ---------- Соглашение ---------- */
+.form-field.agreement {
+  display: flex;
+  align-items: baseline;
+}
+/* ---------- Btn - Кнопка отправки формы ---------- */
+.form-btn {
+  padding: 4px 8px;
+
+  font-family: var(--primary-fonts);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.27px;
+
+  background-color: var(--shadow-15);
+  border: 1px solid var(--shadow-04);
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px var(--shadow-14);
+  cursor: pointer;
+}
+.form-btn:hover,
+.form-btn:focus {
+  background-color: var(--shadow-02);
+  border-color: var(--black-bg-color);
+  box-shadow: 0px 4px 4px 0px var(--shadow-02);
+}

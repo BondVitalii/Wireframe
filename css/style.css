@@ -162,11 +162,14 @@
   border-radius: 2px;
   background-color: var(--accent-bg-color);
 
-  transform: scaleX(0.7);
+  transform: scaleX(1);
   transition: transform var(--transit);
 }
 .site-nav .link.current:hover::after {
-  transform: scaleX(1);
+  transform: scaleX(0.6);
+}
+.site-nav.my-nav {
+  margin-left: auto;
 }
 .auth-nav {
   display: flex;
@@ -505,7 +508,7 @@ ____________________________________________
   text-align: center;
   line-height: 1.6;
 }
-/*__________ Modal window __________*/
+/*__________ Modal window Join Today __________*/
 .backdrop {
   position: fixed;
   top: 0;
@@ -556,7 +559,6 @@ ____________________________________________
   height: 24px;
   padding: 0;
 
-  /* border-radius: 50%; */
   color: var(--accent-bg-color);
   background-color: var(--white-bg-color);
   border: 1px solid var(--accent-bg-color);
