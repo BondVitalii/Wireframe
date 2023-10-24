@@ -513,6 +513,52 @@ ____________________________________________
   color: var(--accent-text-color);
   transform: translateY(-33px) scale(0.95);
 }
+.success-icon {
+  opacity: 0;
+  fill: rgb(0, 164, 57);
+  transition: opacity var(--transit);
+}
+.info-icons {
+  position: absolute;
+  /* bottom: 4px; */
+  top: 12px;
+  right: 4px;
+}
+.register-form-input:not(:placeholder-shown):valid:required
+  ~ .info-icons
+  > .success-icon {
+  opacity: 1;
+}
+.warning-msg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(20px);
+
+  display: block;
+  width: 120%;
+  font-size: 12px;
+  color: rgb(255, 0, 0);
+  text-align: left;
+  opacity: 0;
+
+  transition: opacity var(--transit);
+}
+.register-form-input:not(:placeholder-shown):focus:invalid:required
+  ~ .warning-msg {
+  opacity: 1;
+}
+.warning-icon {
+  opacity: 0;
+  fill: rgb(255, 0, 0);
+
+  transition: opacity var(--transit);
+}
+.register-form-input:not(:placeholder-shown):focus:invalid:required
+  ~ .info-icons
+  > .warning-icon {
+  opacity: 1;
+}
 
 /*__________ Signup section 6 __________*/
 .signup-section {
