@@ -53,7 +53,28 @@
           </li>
         </ul>
 
-        <button class="btn-animation" type="button">Animation</button>
+        <ul class="site-nav my-nav txt list">
+          <li class="item">
+            <a
+              class="link"
+              href="https://bondvitalii.github.io/Animation/"
+              aria-label="Ссылка на занятие по Формам"
+              rel="noopener no-referrer"
+              target="_blank"
+              >Animation</a
+            >
+          </li>
+          <li class="item">
+            <a
+              class="link"
+              href="https://bondvitalii.github.io/Form-Repeta/"
+              aria-label="Ссылка на занятие по Формам"
+              rel="noopener no-referrer"
+              target="_blank"
+              >Form</a
+            >
+          </li>
+        </ul>
 
         <ul class="auth-nav list">
           <li class="item">
@@ -311,7 +332,90 @@
         </div>
       </section>
 
-      <!-- Signup секция (Регистрация 5)-->
+      <!-- Register секция (Регистрация 5)-->
+      <section class="section register no-padding">
+        <div class="container">
+          <h2 hidden>Section register</h2>
+          <div class="wrapper-register">
+            <div class="register-left-wrapper">
+              <h3 class="register-title">
+                The largest community of photo enthusiasts
+              </h3>
+            </div>
+
+            <div class="register-right-wrapper">
+              <strong class="title">Sign up for a free account</strong>
+              <form class="form-register">
+                <div class="register-form-group">
+                  <label class="register-form-filed">
+                    <input
+                      class="register-form-input"
+                      type="text"
+                      name="user-firs-name"
+                      placeholder="Antony"
+                      minlength="3"
+                      required
+                    />
+                    <span class="register-form-lable">First name</span>
+                    <!-- <span class="warning-msg"
+                      >Поле должно содержать минимум 3 символа.</span
+                    > -->
+                    <!-- <svg class="info-icons" width="16" height="16">
+                      <use
+                        class="warning-icon"
+                        href="./imag/icons.svg#icon-warning"
+                      ></use>
+                      <use
+                        class="success-icon"
+                        href="./imag/icons.svg#icon-success"
+                      ></use>
+                    </svg> -->
+                  </label>
+
+                  <label class="register-form-filed">
+                    <input
+                      class="register-form-input"
+                      type="text"
+                      name="user-last-name"
+                      id="user-last-name"
+                      placeholder="Black"
+                      minlength="3"
+                      required
+                    />
+                    <span class="register-form-lable">Last name</span>
+                  </label>
+                </div>
+
+                <label class="register-form-filed" for="user-email">
+                  <input
+                    class="register-form-input"
+                    type="email"
+                    name="user-email"
+                    placeholder=" "
+                    id="user-email"
+                  />
+                  <span class="register-form-lable">Email address</span>
+                </label>
+
+                <label class="register-form-filed" for="user-password">
+                  <input
+                    class="register-form-input"
+                    type="password"
+                    name="user-password"
+                    placeholder=" "
+                    id="user-password"
+                  />
+                  <span class="register-form-lable">Create password</span>
+                </label>
+
+                <button type="submit">Register</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Signup секция (Регистрация 6)-->
       <section class="signup-section section" id="support">
         <div class="container">
           <h2 class="section-title">registration and subscription section</h2>
@@ -449,7 +553,8 @@
       </div>
     </footer>
 
-    <!-- Modal window -->
+    <!-- Modal window Join Today -->
+    <!-- is-hidden -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn-close" type="button" data-modal-close>
@@ -457,6 +562,8 @@
             <use href="./imag/icons.svg#icon-close"></use>
           </svg>
         </button>
+
+        <!-- ---------- Form-modal ---------- -->
       </div>
     </div>
 
@@ -464,7 +571,10 @@
 
     <!-- скрипт для динамической высоты Header (Репета) -->
     <script src="./js/page-header.js"></script>
+
     <!-- скрипт для (Modal-window) -->
     <script src="./js/modal.js"></script>
+    <!-- скрипт для (Modal-form) Репета -->
+    <script src="./js/modal-form.js"></script>
   </body>
 </html>
