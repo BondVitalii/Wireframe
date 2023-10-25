@@ -54,6 +54,8 @@
   top: 0;
   left: 0;
 
+  z-index: 1;
+
   width: 100%;
   min-height: 60px;
 
@@ -169,7 +171,7 @@
   transform: scaleX(0.6);
 }
 .site-nav.my-nav {
-  margin-left: auto;
+  margin-left: 100px;
 }
 .auth-nav {
   display: flex;
@@ -456,7 +458,7 @@ ____________________________________________
   width: 100%;
   height: 40px;
 
-  padding: 8px 22px 8px 8px;
+  padding: 8px 26px 8px 8px;
   margin-bottom: 34px;
 
   font-size: 15px;
@@ -467,7 +469,7 @@ ____________________________________________
 
   outline: transparent;
 
-  /* transition: border-color var(--transit-fast); */
+  transition: border-color var(--transit);
 }
 .register-form-group .register-form-input {
   width: 237px;
@@ -494,7 +496,6 @@ ____________________________________________
 
 .register-form-lable {
   position: absolute;
-  /* bottom: 8px; */
   top: 8px;
   left: 8px;
   transform-origin: left center;
@@ -520,9 +521,8 @@ ____________________________________________
 }
 .info-icons {
   position: absolute;
-  /* bottom: 4px; */
   top: 12px;
-  right: 4px;
+  right: 8px;
 }
 .register-form-input:not(:placeholder-shown):valid:required
   ~ .info-icons
@@ -686,8 +686,10 @@ ____________________________________________
   top: 50%;
   left: 50%;
 
-  width: 450px;
-  min-height: 600px;
+  width: 408px;
+  min-height: 584px;
+
+  padding: 54px 24px 24px 24px;
 
   background-color: var(--white-bg-color);
   border-radius: 4px;
@@ -729,4 +731,38 @@ ____________________________________________
   color: var(--white-bg-color);
   background-color: var(--accent-bg-color);
   border-color: transparent;
+}
+/* Form-modal */
+.modal-title {
+  display: block;
+
+  text-align: center;
+
+  margin-bottom: 16px;
+
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: -0.225px;
+
+  color: var(--black-text-color);
+}
+.modal-form {
+}
+.modal-form-field {
+  position: relative;
+
+  display: block;
+  margin-bottom: 8px;
+}
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+
+  padding: 8px 16px;
+}
+.modal-form-lable {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
