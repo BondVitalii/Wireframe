@@ -732,12 +732,10 @@ ____________________________________________
   background-color: var(--accent-bg-color);
   border-color: transparent;
 }
-/* Form-modal */
+/* ----- Form-modal ----- */
 .modal-title {
   display: block;
-
   text-align: center;
-
   margin-bottom: 16px;
 
   font-size: 15px;
@@ -752,17 +750,42 @@ ____________________________________________
 .modal-form-field {
   position: relative;
 
-  display: block;
-  margin-bottom: 8px;
+  display: flex;
+  margin-bottom: 26px;
 }
+
 .modal-form-input {
   width: 100%;
   height: 40px;
 
-  padding: 8px 16px;
+  padding: 8px 16px 8px 30px;
 }
 .modal-form-lable {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+}
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  transform: translateY(-50%);
+}
+
+.modal-form-massage {
+  position: relative;
+  display: flex;
+}
+.modal-form-textarea {
+  width: 100%;
+
+  padding: 12px;
+  resize: none;
+}
+.modal-comment-lable {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
 }
