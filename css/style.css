@@ -736,7 +736,7 @@ ____________________________________________
 .modal-title {
   display: block;
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 30px;
 
   font-size: 15px;
   font-weight: 700;
@@ -751,7 +751,12 @@ ____________________________________________
   position: relative;
 
   display: flex;
-  margin-bottom: 26px;
+  margin-bottom: 28px;
+  color: var(--primary-text-color);
+}
+.modal-form-field:nth-child(3) {
+  /* У последнего(3 го) поля изменяем нижний отступ. */
+  margin-bottom: 46px;
 }
 
 .modal-form-input {
@@ -759,23 +764,71 @@ ____________________________________________
   height: 40px;
 
   padding: 8px 16px 8px 30px;
+
+  border: 1px solid var(--shadow-04);
+  border-radius: 3px;
+  outline: 1px solid transparent;
+
+  transition: outline-color var(--transit-fast),
+    border-color var(--transit-fast), box-shadow var(--transit-fast);
 }
+.modal-form-input:focus,
+.modal-form-input:focus-visible {
+  outline-color: var(--accent-bg-color);
+  border-color: var(--accent-bg-color);
+  box-shadow: 0px 4px 4px 0px rgba(41, 43, 77, 0.2);
+
+  /* box-shadow: 0px 2px 2px 0px var(--shadow-12), 0px 2px 1px 0px var(--shadow-8),
+    0px 3px 1px 0px var(--shadow-01); */
+}
+.modal-form-input:focus + .modal-form-lable,
+.modal-form-input:not(:placeholder-shown) + .modal-form-lable {
+  /* При фокусе делаем смещение и уменьшение label, и меняем ему цвет.  */
+  color: var(--accent-text-color);
+  transform: translateY(-45px) translateX(-30px) scale(0.8);
+}
+.modal-form-input::placeholder {
+  /* Стилизируем placeholder(подсказку) задаем цвет и делаем её прозрачной пока label находится в поле. */
+  opacity: 0;
+  color: var(--shadow-15);
+  transition: opacity var(--transit);
+}
+.modal-form-input:focus::placeholder {
+  /* Стилизируем placeholder(подсказку) делаем её непрозрачной когда label находится не в поле. */
+  opacity: 1;
+}
+
 .modal-form-lable {
   position: absolute;
   top: 50%;
   left: 30px;
+  transform-origin: left center;
+  /* transform-origin - (Точка трансформации) позволяет сместить точку трансформации, относительно которой происходит изменение положения, размера или формы элемента. */
   transform: translateY(-50%);
+
+  color: var(--shadow-50);
+
+  transition: color var(--transit), transform var(--transit);
 }
+
 .modal-form-icon {
   position: absolute;
   top: 50%;
   left: 6px;
+  fill: currentColor;
+
   transform: translateY(-50%);
+
+  transition: fill var(--transit), transform var(--transit);
+}
+.modal-form-input:focus ~ .modal-form-icon {
+  color: var(--accent-bg-color);
 }
 
 .modal-form-massage {
   position: relative;
   display: flex;
+  margin-bottom: 16px;
 }
 .modal-form-textarea {
   width: 100%;
@@ -785,7 +838,21 @@ ____________________________________________
 }
 .modal-comment-lable {
   position: absolute;
-  top: 50%;
-  left: 30px;
-  transform: translateY(-50%);
+  top: -26px;
+  left: 0;
+}
+.modal-form-agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+.modal-form-desc {
+  font-size: 12px;
+}
+.modal-form-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
