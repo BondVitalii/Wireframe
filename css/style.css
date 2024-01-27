@@ -67,31 +67,24 @@ ul,
 li {
   margin: 0;
   padding: 0;
-  /* Убираем все паддинги и марджины у всех заголовков, параграфов, списков */
 }
 .list {
-  list-style: none; /* Убираем стандартные стили у списка (точки) */
+  list-style: none;
 }
 .link {
-  text-decoration: none; /* Убираем подчеркивание у ссылок */
+  text-decoration: none;
 }
 img {
   display: block;
   max-width: 100%;
   height: auto;
-  /* Примечание
-- ставим картинке display: block; чтоб убрать нижний зазор.
-- ставим картинке max-width: 100%; чтоб была 100% ширины картинки.
-- ставим картинке height: auto; чтоб высота высчитывалась автоматически.
-*/
 }
 /* =============== Basic style =============== */
 html {
-  scroll-behavior: smooth; /* плавный скролл Ярослав */
+  scroll-behavior: smooth;
 }
 body {
-  padding-top: 60px; /* padding-top(Репета).Этом сдвигаем body вниз на высоту header(чтоб header не залазил на боди). */
-
+  padding-top: 60px;
   font-family: var(--primary-fonts);
   font-size: 18px;
   font-style: normal;
@@ -102,8 +95,6 @@ body {
   background-color: var(--white-bg-color);
 }
 button {
-  /* cursor: pointer; меняет вид курсора при активном состоянии элемента (::hover, ::focus).
-  Задаем этот параметр глобально всем кнопкам */
   cursor: pointer;
 }
 /* =============== Common styles =============== */
@@ -111,7 +102,6 @@ button {
 /*__________ Section __________*/
 
 .section {
-  /* Задаем размеры секции */
   max-width: 1680px;
   margin-left: auto;
   margin-right: auto;
@@ -124,7 +114,6 @@ button {
   padding-bottom: 120px;
 }
 .section.no-padding {
-  /* Секция без паддингов */
   padding-top: 0px;
   padding-bottom: 0px;
 }
@@ -132,7 +121,6 @@ button {
   background-color: var(--second-light-bg-cl);
 } */
 .container {
-  /* Задаем размеры контейнера */
   margin-left: auto;
   margin-right: auto;
   width: 1560px;
@@ -187,7 +175,7 @@ button {
   background-color: var(--white-bg-color);
   box-shadow: 0px 4px 4px 0px var(--shadow-12);
 
-  cursor: pointer; /* cursor: pointer; меняет вид курсора при активном состоянии элемента (::hover, ::focus) */
+  cursor: pointer;
 }
 .btn {
   font-size: 17px;
@@ -220,38 +208,7 @@ button {
 }
 
 /*__________ Visually hidden __________*/
-
-/** Скрываем элементы, заголовки.
-Вариант-1 (правильный)
-|============================
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-|============================
-Вариант-2 (Ярослав ментор)
-|============================
-.hidden-title {
-  display: none;
-}
-|============================
-Вариант-3 (Временный в начале)
-|============================
-Ставим hidden в тег
-|============================
-*/
-
-.visually-hidden {
-  /* visually-hidden для скрытия заголовков */
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -265,56 +222,6 @@ button {
 }
 
 /* =============== Header section =============== */
-
-/** Настройки для Header
-Настройки для Header (Ярослав)
-|============================
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-
-  z-index: 1;
-
-  background-color: var(--white-bg-cl);
-
-  border-bottom: 1px solid var(--cornflower-bg-cl);
-  box-shadow: 0px 1px 6px 0px var(--shadow-08), 0px 1px 1px 0px var(--shadow-16),
-    0px 2px 1px 0px var(--shadow-08);
-}
-.header.no-transparency {
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(2px);
------
-1) Для Header создаем .header {} и прописываем стили в CSS.
-2) На body ставим padding-top: 76px; чтоб сдвинуть body вниз под Header.
-|============================
-
-Динамические настройки для Header с JS-скриптом (Репета)
-|============================
-.page-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  min-height: 500px;
-
-  z-index: 1;
-
-  background-color: var(--white-bg-cl);
-
-  border-bottom: 1px solid var(--cornflower-bg-cl);
-  box-shadow: 0px 1px 6px 0px var(--shadow-08), 0px 1px 1px 0px var(--shadow-16),
-    0px 2px 1px 0px var(--shadow-08);
-}
------
-1) Подключаем скрипт с динамическими настройками Header (page-header.js).
-2) На Header ставим class="page-header".
-3) В CSS в селекторе .page-header {прописываем стили}
-|============================
-*/
 
 .page-header {
   position: fixed;
@@ -363,35 +270,6 @@ button {
 .site-nav {
   display: flex;
 }
-
-/** Снимаем крайнюю геометрию
-вариант №1
-|============================
-сначала всем даем марджин.
-.site-nav .item {
-  margin-right: 40px;
-}
-а потом у последнего убираем.
-.site-nav .item:last-child {
-  margin-right: 0;
-}
-|============================
-вариант №2
-|============================
-даем марджин всем кроме последнего
-.site-nav .item:not(:last-child) {
-  margin-right: 40px;
-}
-|============================
-вариант №3 (селектор соседа "+")
-|============================
-это (old shool) даем марджин всем item короме первого и последнего
-.site-nav .item + .item {
-  margin-right: 40px;
-}
-|============================
-*/
-
 .site-nav .item:not(:last-child) {
   margin-right: 40px;
 }
@@ -476,7 +354,7 @@ button {
   background-color: var(--accent-bg-color);
   border-color: transparent;
 
-  cursor: pointer; /* cursor: pointer; меняет вид курсора при активном состоянии элемента (::hover, ::focus) */
+  cursor: pointer;
 }
 .play-icon {
   display: flex;
@@ -513,87 +391,6 @@ button {
 .feature-list .item:nth-last-child(-n + 2) {
   margin-bottom: 0;
 }
-/** Убираем крайнюю геометрию справа и снизу
-____________________________________________
-
-! УБИРАЕМ КРАЙНЮЮ ГЕОМЕТРИЮ СПРАВА !
-
-1й вариант (%)
-|============================
-.feature-list .item {
-  width: calc((100% - 1 * 148px) / 2);
-  margin-right: 148px;
-  margin-bottom: 60px;
-}
-убираем у крайних правых (последних)
-.feature-list .item:nth-child(2n) {
-  margin-right: 0;
-}
-убираем у нижних
-.feature-list .item:nth-last-child(-n + 2) {
-  margin-bottom: 0;
-}
-
-|================================================
-
-2й вариант
-|============================
-задаем li(item) фиксированную ширину
-|-------------------
-.feature-list .item {
-  width: 686px;
-}
-|-------------------
-сначало задаем всем отступ с права
-.feature-list .item {
-  margin-right: 148px;
-}
-потом убираем у крайних правых (последних)
-.feature-list .item:nth-child(2n) {
-  margin-right: 0;
-} 
-|================================================
-
-3й вариант
-|============================
-сразу задаем отступ за исключение крайних правых (последних)
-|-------------------
-.feature-list .item:not(:nth-child(2n)) {
-  margin-right: 148px;
-}
-
-|================================================
-|================================================
-|||||||||||||||||||||||||||||||||||||||||||||||||
-|================================================
-|================================================
-
-! УБИРАЕМ КРАЙНЮЮ ГЕОМЕТРИЮ СНИЗУ !
-
-1й вариант
-|============================
-сначало задаем всем отступ с низу
-|-------------------
-.feature-list .item {
-  margin-bottom: 60px;
-}
-потом убираем у нижних
-|-------------------
-.feature-list .item:nth-last-child(-n + 2) {
-  margin-bottom: 0;
-}
-|================================================
-
-2й вариант
-|============================
-сразу задаем отступ за исключение нижних
-|-------------------
-.feature-list .item:not(:nth-last-child(-n + 2)) {
-  margin-bottom: 60px;
-}
-|================================================
-*/
-
 .feature-list .title,
 .work-list .title {
   margin-bottom: 24px;
@@ -628,28 +425,6 @@ ____________________________________________
 .work-list > .item:nth-child(2n) .work-content {
   margin-right: 84px;
 }
-
-/** Репета
-|============================
-.work-list > .item {
-  display: flex;
-  align-items: center;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  background-color: var(--white-bg-color);
-}
-.work-list > .item:nth-child(2n) {
-  flex-direction: row-reverse;
-  background-color: var(--second-light-bg-cl);
-}
-.work-list > .item:nth-child(2n + 1) .work-content {
-  margin-left: 84px;
-}
-.work-list > .item:nth-child(2n) .work-content {
-  margin-right: 84px;
-}
-|============================
-*/
 
 /* =============== Testimonials section 4 =============== */
 
@@ -947,12 +722,8 @@ ____________________________________________
   transition: opacity var(--transit);
 }
 .backdrop.is-hidden {
-  /* Это мы ставим, чтоб пока наше модальное окно backdrop закрыто, 
-  через него можно было воздействовать (кликать) на другие объекты которые под ним. */
   opacity: 0;
   pointer-events: none;
-  /* pointer-events: none; - Элемент не может быть целью (target) событий мыши; 
-  тем не менее, целью событий мыши могут быть его потомки, если их pointer-events имеет какое-либо другое значение. В этом случае события мыши вызовут ожидаемое срабатывание обработчиков на этом родительском элементе на пути к/от потомк(у)/(а) во время фазы захвата/всплытия. */
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.2);
@@ -1000,7 +771,7 @@ ____________________________________________
   transition: color var(--transit), background-color var(--transit),
     border-color var(--transit);
 
-  cursor: pointer; /* cursor: pointer; меняет вид курсора при активном состоянии элемента (::hover, ::focus) */
+  cursor: pointer;
 }
 .modal-icon {
   fill: currentColor;
@@ -1036,7 +807,6 @@ ____________________________________________
   color: var(--primary-text-color);
 }
 .modal-form-field:nth-child(3) {
-  /* У последнего(3 го) поля изменяем нижний отступ. */
   margin-bottom: 46px;
 }
 /* ----- input ----- */
@@ -1055,14 +825,12 @@ ____________________________________________
 }
 .modal-form-input:focus,
 .modal-form-input:focus-visible {
-  /* При фокусе бордер поля меняет цвет и добавляется тень */
   outline-color: var(--accent-bg-color);
   border-color: var(--accent-bg-color);
   box-shadow: 0px 4px 4px 0px rgba(41, 43, 77, 0.2);
 }
 .modal-form-input:focus + .modal-form-lable,
 .modal-form-input:not(:placeholder-shown) + .modal-form-lable {
-  /* При фокусе делаем смещение и уменьшение label, и меняем ему цвет.  */
   color: var(--accent-text-color);
   transform: translateY(-45px) translateX(-30px) scale(0.8);
 }
@@ -1072,7 +840,6 @@ ____________________________________________
   top: 50%;
   left: 30px;
   transform-origin: left center;
-  /* transform-origin - (Точка трансформации) позволяет сместить точку трансформации, относительно которой происходит изменение положения, размера или формы элемента. */
   transform: translateY(-50%);
 
   color: var(--shadow-50);
@@ -1096,14 +863,12 @@ ____________________________________________
 /* ----- placeholder(подсказка) ----- */
 .modal-form-input::placeholder,
 .modal-form-textarea::placeholder {
-  /* Стилизируем placeholder(подсказку) задаем цвет и делаем её прозрачной пока label находится в поле. */
   opacity: 0;
   color: var(--shadow-15);
   transition: opacity var(--transit);
 }
 .modal-form-input:focus::placeholder,
 .modal-form-textarea:focus::placeholder {
-  /* Стилизируем placeholder(подсказку) делаем её непрозрачной когда label находится не в поле. */
   opacity: 1;
 }
 /* ---------- Поле коментария textarea ---------- */
@@ -1127,7 +892,6 @@ ____________________________________________
 }
 .modal-form-textarea:focus,
 .modal-form-textarea:focus-visible {
-  /* При фокусе бордер поля меняет цвет и добавляется тень */
   outline-color: var(--accent-bg-color);
   border-color: var(--accent-bg-color);
   box-shadow: 0px 4px 4px 0px rgba(41, 43, 77, 0.2);
@@ -1137,7 +901,6 @@ ____________________________________________
   top: 2px;
   left: 10px;
   transform-origin: left center;
-  /* transform-origin - (Точка трансформации) позволяет сместить точку трансформации, относительно которой происходит изменение положения, размера или формы элемента. */
 
   color: var(--shadow-50);
 
@@ -1145,7 +908,6 @@ ____________________________________________
 }
 .modal-form-textarea:focus + .modal-comment-lable,
 .modal-form-textarea:not(:placeholder-shown) + .modal-comment-lable {
-  /* При фокусе делаем смещение и уменьшение label, и меняем ему цвет.  */
   color: var(--accent-text-color);
   transform: translateY(-28px) translateX(-10px) scale(0.8);
 }
@@ -1210,10 +972,10 @@ ____________________________________________
 }
 .modal-form-desc {
   font-size: 12px;
-  user-select: none; /* user-select: none; запрет копирования текста */
+  user-select: none;
 }
 .modal-form-checkbox {
-  appearance: none; /* appearance: none; Прячем изночальный checkbox */
+  appearance: none;
   position: absolute;
 }
 .icon-checkbox {
@@ -1228,11 +990,11 @@ ____________________________________________
 }
 .modal-form-checkbox:checked + .icon-checkbox {
   background-color: var(--accent-bg-color);
-  border: transparent; /* Рамку делаем прозрачной. */
+  border: transparent;
   background-image: url('../../imag/svg/click.svg');
-  background-size: contain; /* Гарантированно сохраняет пропорции изображения. */
-  background-origin: border-box; /* Распространяется на border + padding + content. */
-  transform: scale(1.3); /* Увеличиваем (зумируем) checkbox  */
+  background-size: contain;
+  background-origin: border-box;
+  transform: scale(1.3);
 }
 
 /* ---------- Кнопка отправки формы button ---------- */
@@ -1249,5 +1011,5 @@ ____________________________________________
 
   border: 2px solid var(--shadow-02);
 
-  cursor: not-allowed; /* cursor: not-allowed; курсор неактивный, подсказка пользователю*/
+  cursor: not-allowed;
 }
